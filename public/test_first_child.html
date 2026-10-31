@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	
+	/*↓spanタグは兄弟要素のうちの最初の要素ではないので、これは効かない */
+	.parent span:first-child {
+	    color: red;
+	}
+	.parent span:first-of-type {
+	    color: blue;
+	}
+	.parent span:last-child {
+	    color: green;
+	}
+	.parent span:last-of-type {
+	    color: yellow;
+	}
+		
+</style>
+</head>
+
+<body>
+	
+	<div class="parent">親要素
+		<h3>兄弟要素（h3タグ）</h3>
+		<p>兄弟要素（pタグ）</p>
+		<span>兄弟要素（spanタグ1）</span>
+		<span>兄弟要素（spanタグ2）</span>
+		<span>兄弟要素（spanタグ3）</span>
+	</div>
+	
+</body>
+</html>
+
+<!-- https://zenn.dev/harryduck/articles/ff45823c0320a1 -->
+<!-- https://jito-site.com/first-child-first-of-type/ -->
+
+<!--
+	2026/03/27金
+	
+	:first-child	兄弟要素の「最初の要素」を指定
+	:first-of-type	兄弟要素の「その種類の最初の要素」を指定
+	:last-child		兄弟要素の「最後の要素」を指定
+	:last-of-type	兄弟要素の「その種類の最後の要素」を指定
+-->
+
+

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+	.table-wrapper {
+	  max-width: 50%; /* 97%; */
+	  height: 200px; /* 450px; */
+	  overflow: scroll;		/* 縦横スクロール */
+	  margin: auto;			/* 真ん中寄せ */
+	}
+	
+	table {
+	  border: 1px solid gray;
+	  border-collapse: collapse;
+	}
+
+	td, th {
+	  border: 1px solid gray;
+	  padding: 5px;
+	  text-align: center;
+	  width: 15em;
+	}
+	thead tr th:nth-of-type(1) {
+		width: 2.55em;
+	}
+	thead tr th:nth-of-type(1) {
+		width: 2.55em;
+	}
+	
+	thead tr th {
+		background-color: powderblue;
+		position: sticky;
+		top: 0px;
+		z-index: 2;
+		border: 1px solid gray;
+		width: 15em;
+	}
+	tbody tr th:nth-of-type(1),
+	thead tr th:nth-of-type(1) {
+		background-color: powderblue;
+		position: sticky;
+		left: 0em;
+		width: 2.55em;
+		text-align: right;
+		z-index: 3;
+		border: 1px solid gray;
+		text-align: right;
+	}
+	tbody tr th:nth-of-type(2), 
+	thead tr th:nth-of-type(2) {
+		background-color: powderblue;
+		position: sticky;
+		left: 2.55em;
+	/*	width: 9.55em;*/
+		width: 15em;
+		z-index: 3;
+		border: 1px solid gray;
+	}
+	tbody tr th:nth-of-type(3), 
+	thead tr th:nth-of-type(3) {
+		background-color: powderblue;
+		position: sticky;
+		left: 12.00em;
+		width: 9.5em;
+		z-index: 3;
+		border: 1px solid gray;
+	}
+	thead tr th:nth-of-type(1), 
+	thead tr th:nth-of-type(2), 
+	thead tr th:nth-of-type(3) {
+		background-color: powderblue;
+		position: sticky;
+		top: 0px;
+		z-index: 4;
+		border: 1px solid gray;
+		text-align: center;
+	}
+	
+	
+	
+	:root {
+	  --first-column-width: 2rem;
+	  --first-row-height: 1rem;
+	}
+	.fixed-table-multi {
+	  max-width: 500px;
+	  max-height: 300px;
+	  overflow: scroll;
+	  border-top: 1px solid #ccc;
+	  border-left: 1px solid #ccc;
+	  * {
+	    box-sizing: border-box;
+	  }
+	  table {
+	    border-spacing: 0;
+	    th, td {
+	      min-width: 6rem;
+	      max-height: 2rem;
+	      min-height: 2rem;
+	      line-height: 2rem;
+	      text-align: center;
+	      border-bottom: 1px solid #ccc;
+	      border-right: 1px solid #ccc;
+	    }
+	    th {
+	      background-color: #eee;
+	    }
+	    tr {
+	      th, td {
+	        &:nth-child(1),
+	        &:nth-child(2) {
+	          position: sticky;
+	        }
+	        &:nth-child(1) {
+	          left: 0;
+	          min-width: var(--first-column-width);
+	        }
+	        &:nth-child(2) {
+	          left: var(--first-column-width);
+	        }
+	      }
+	    }
+	    thead {
+	      tr {
+	        &:nth-child(1) th,
+	        &:nth-child(2) th {
+	          position: sticky;
+	        }
+	        &:nth-child(1) th {
+	          top: 0;
+	          min-height: var(--first-row-height);
+	          max-height: var(--first-row-height);
+	          line-height: var(--first-row-height);
+	        }
+	        &:nth-child(2) th {
+	          top: calc(var(--first-row-height) + 3px);
+	        }
+	        th:nth-child(1),
+	        th:nth-child(2) {
+	          z-index: 1;
+	        }
+	      }
+	    }
+	  }
+	}
+</style>
+</head>
+<body>
+	<div class="table-wrapper">
+		<table>
+			<thead>
+				<tr>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>6</th>
+					<th>7</th>
+					<th>8</th>
+					<th>9</th>
+					<th>10</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>a1</th>
+					<th>b1</th>
+					<th>c1</th>
+					<th>d1</th>
+					<th>e1</th>
+					<th>a1</th>
+					<th>b1</th>
+					<th>c1</th>
+					<th>d1</th>
+					<th>e1</th>
+				</tr>
+				<tr>
+					<th>a1</th>
+					<th>b1</th>
+					<th>c1</th>
+					<th>d1</th>
+					<th>e1</th>
+					<th>a1</th>
+					<th>b1</th>
+					<th>c1</th>
+					<th>d1</th>
+					<th>e1</th>
+				</tr>
+				<tr>
+					<th>a1</th>
+					<th>b1</th>
+					<th>c1</th>
+					<th>d1</th>
+					<th>e1</th>
+					<th>a1</th>
+					<th>b1</th>
+					<th>c1</th>
+					<th>d1</th>
+					<th>e1</th>
+				</tr>
+				<tr>
+					<th>a1</th>
+					<th>b1</th>
+					<th>c1</th>
+					<th>d1</th>
+					<th>e1</th>
+					<th>a1</th>
+					<th>b1</th>
+					<th>c1</th>
+					<th>d1</th>
+					<th>e1</th>
+				</tr>
+				<tr>
+					<th>a1</th>
+					<th>b1</th>
+					<th>c1</th>
+					<th>d1</th>
+					<th>e1</th>
+					<th>a1</th>
+					<th>b1</th>
+					<th>c1</th>
+					<th>d1</th>
+					<th>e1</th>
+				</tr>
+			</tbody>
+			<tfoot>
+				
+			</tfoot>
+		</table>
+	</div>
+	
+	
+	
+	<div class="fixed-table-multi">
+	  <table>
+	    <thead>
+	      <tr><th></th><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr>
+	      <tr><th></th><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr>
+	    </thead>
+	    <tbody>
+	      <tr><th>01</th><th>01</th><td>A01</td><td>B01</td><td>C01</td><td>D01</td><td>E01</td></tr>
+	      <tr><th>02</th><th>02</th><td>A02</td><td>B02</td><td>C02</td><td>D02</td><td>E02</td></tr>
+	      <tr><th>03</th><th>03</th><td>A03</td><td>B03</td><td>C03</td><td>D03</td><td>E03</td></tr>
+	      <tr><th>04</th><th>04</th><td>A04</td><td>B04</td><td>C04</td><td>D04</td><td>E04</td></tr>
+	      <tr><th>05</th><th>05</th><td>A05</td><td>B05</td><td>C05</td><td>D05</td><td>E05</td></tr>
+	      <tr><th>06</th><th>06</th><td>A06</td><td>B06</td><td>C06</td><td>D06</td><td>E06</td></tr>
+	      <tr><th>07</th><th>07</th><td>A07</td><td>B07</td><td>C07</td><td>D07</td><td>E07</td></tr>
+	      <tr><th>08</th><th>08</th><td>A08</td><td>B08</td><td>C08</td><td>D08</td><td>E08</td></tr>
+	      <tr><th>09</th><th>09</th><td>A09</td><td>B09</td><td>C09</td><td>D09</td><td>E09</td></tr>
+	      <tr><th>10</th><th>10</th><td>A10</td><td>B10</td><td>C10</td><td>D10</td><td>E10</td></tr>
+	      <tr><th>11</th><th>11</th><td>A11</td><td>B11</td><td>C11</td><td>D11</td><td>E11</td></tr>
+	      <tr><th>12</th><th>12</th><td>A12</td><td>B12</td><td>C12</td><td>D12</td><td>E12</td></tr>
+	      <tr><th>13</th><th>13</th><td>A13</td><td>B13</td><td>C13</td><td>D13</td><td>E13</td></tr>
+	      <tr><th>14</th><th>14</th><td>A14</td><td>B14</td><td>C14</td><td>D14</td><td>E14</td></tr>
+	      <tr><th>15</th><th>15</th><td>A15</td><td>B15</td><td>C15</td><td>D15</td><td>E15</td></tr>
+	      <tr><th>16</th><th>16</th><td>A16</td><td>B16</td><td>C16</td><td>D16</td><td>E16</td></tr>
+	    </tbody>
+	  </table>
+	</div>
+	
+</body>
+</html>
+
+
+<!--
+	https://www.tohoho-web.com/how2/header-fixed-table-multi.html
+	
+	https://codepen.io/orangain/pen/yGQzpd
+	
+	https://qiita.com/orangain/items/6268b6528ab33b27f8f2
+	
+
+-->

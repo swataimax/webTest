@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+	div {
+		width: 200px;
+		height: 200px;
+		background-color: lightgray;
+		border: 1px solid gray;
+	}
+	div.auto {
+		overflow: auto;
+	}
+	div.scroll {
+		overflow: scroll;
+	}
+	div.hidden {
+		overflow: hidden;
+	}
+	div.visibl {
+		overflow: visible;
+	}
+	div.scroll-x {
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+	div.scroll-y {
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+	
+	
+	.box1 {
+		height: 100px;
+		width: 100px;
+		border: 1px solid gray;
+		overflow-y: scroll;
+	}
+	.box2 {
+		height: 100px;
+		width: 100px;
+		border: 1px solid gray;
+		overflow-x: scroll;
+		white-space: nowrap;
+	}
+	
+
+</style>
+</head>
+<body>
+	<section>
+		auto
+		<div class="auto">
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+		</div>
+	</section>
+	<section>
+		scroll
+		<div class="scroll">
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+		</div>
+	</section>
+	<section>
+		hidden:
+		<div class="hidden">
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+		</div>
+	</section>
+	<section>
+		visible:
+		<div class="visible">
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+		</div>
+	</section>
+	
+	<br>
+	<br>
+	<br>
+	
+	<hr>
+	
+	<section>
+		scroll-x:
+		<div class="scroll-x">
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+		</div>
+	</section>
+	<section>
+		scroll-y:
+		<div class="scroll-y">
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+			testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+		</div>
+	</section>
+	
+	
+	<br>
+	<br>
+	<br>
+
+	<hr>
+	<section>
+		<div class="box1">
+			<p>テストテストテストテストテストテストテストテストテストテストテストテストテスト</p>
+		</div>
+	</section>
+	<br>
+	<section>
+		<div class="box2">
+			<p>テストテストテストテストテストテストテストテストテストテストテストテストテスト</p>
+		</div>
+	</section>
+
+
+</body>
+</html>
+
+
+<!--
+	2026/03/28土
+	
+	https://allabout.co.jp/gm/gc/23865/3/#goog_rewarded
+	https://proengineer.internous.co.jp/content/columnfeature/6162
+	
+	auto 	： ブラウザに任せる	（あふれた場合に自動でスクロールバーを表示）
+	scroll 	： スクロールさせる	（スクロールバーを常に表示する）
+	hidden 	： あふれる部分は非表示にす　（スクロールバーを非表示、あふれた部分も非表示）
+	visible	： はみ出してでも全部表示する
+	
+	
+	https://web-camp.io/magazine/archives/97565/
+	CSSのoverflowでボックス内要素の表示方法を指定する方法！
+	
+	overflowを指定した要素にwidthとheightも指定する。
+	overflow-xを使うときは「white-space:normal;」も一緒に指定する
+	
+-->

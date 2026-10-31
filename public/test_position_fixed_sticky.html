@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.container {
+	  width: 100%;
+	  height: 1000px;
+	  background: rgb(255,201,114);
+	  background: linear-gradient(118deg, rgba(255,201,114,1) 0%, rgba(246,179,84,1) 40%, rgba(231,229,97,1) 100%);
+	}
+	.fixed {
+	  width: 250px;
+	  height: 250px;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  z-index: 1;
+	  background: orange;
+	}
+	.sticky {
+	  position: sticky;
+	  top: 0;
+	  left: 250px;
+	  width: 250px;
+	  height: 250px;
+	  background: blue;
+	}
+	.contents {
+	  width: 100%;
+	  height: 500px;
+	  background: lightcoral;
+	  position: relative;
+	}
+	
+	.sticky2 {
+	  position: sticky;
+	  top: 250px;
+	  left: 0px;
+	  width: 250px;
+	  height: 250px;
+	  background: green;
+	}
+	
+	.fixed2 {
+	  width: 250px;
+	  height: 50px;
+	  position: fixed;
+	  left: 0;
+	  bottom: 0;
+	  width: 100%;
+	  z-index: 1;
+	  background: orange;
+	}
+	
+</style>
+</head>
+<body>
+	
+	<div class="container">
+		container
+		<div class="fixed">fixed  header </div>
+		<div class="sticky">sticky</div>
+		<div class="sticky2">sticky2</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="sticky2">sticky3</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		<div class="fixed2">fixed2  footer </div>
+		
+	</div>
+	<div class="contents">contents</div>
+	
+<!--	fixedクラスは親要素のcontainerクラスを飛び越えて追従しているのに対し、-->
+<!--	stickyクラスはcontainerクラスの中でのみ追従している-->
+	
+</body>
+</html>
+
+<!--
+	2026/03/28土
+	
+	https://zero-plus.io/media/css-position-fixed/
+	【CSS】position: fixed;で要素を固定する具体的な方法とは？stickyとの違いも紹介
+	
+	
+-->

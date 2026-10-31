@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.container {
+		/* レイアウト調整用 */
+		padding: 50px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+	}
+	.parent {
+		position: relative;
+		width: 300px;
+		height: 300px;
+		border: 2px dashed black;
+		background-color: orange;
+		z-index: 0;
+	}
+	.child1 {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		z-index: 3;
+	}
+	.child2 {
+		position: absolute;
+		top: 50px;
+		left: 50px;
+		width: 100px;
+		height: 100px;
+		background-color: blue;
+		z-index: 2;
+	}
+	.child3 {
+		position: absolute;
+		top: 100px;
+		left: 100px;
+		width: 100px;
+		height: 100px;
+		background-color: green;
+		z-index: 1;
+	}
+	.child4 {
+		position: absolute;
+		top: 150px;
+		left: 150px;
+		width: 100px;
+		height: 100px;
+		background-color: yellow;
+		z-index: -1;
+	}
+	
+	.p2 {
+	  width: 200px;
+	  height: 200px;
+	  background: lightgray;
+	  position: relative;
+	}
+	.c1 {
+	  width: 100px;
+	  height: 100px;
+	  background: red;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	}
+	.c2 {
+	  width: 100px;
+	  height: 100px;
+	  background: blue;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	}
+	
+	
+	.box {
+	  margin-top: 40px;
+	  padding-top: 20px;
+	  padding-bottom: 20px;
+	  position: relative;
+	  border: 1px solid orange;
+	  border-radius: 4px;
+	  padding: 20px 10px;
+	}
+	.box__title {
+	  position: absolute;
+	  top: -30px;
+	  left: -1px;
+	  background: orange;
+	  padding: 10px 11px;
+	  font-size: 14px;
+	  display: block;
+	  width: 100%;
+	  max-width: 100px;
+	}
+	.box__text {
+	  font-size: 12px;
+	}
+	
+	
+	
+
+</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="parent">
+			<div class="child1"></div>
+			<div class="child2"></div>
+			<div class="child3"></div>
+			<div class="child4"></div>
+		</div>
+		
+		<div class="p2">
+			<div class="c1"></div>
+			<div class="c2"></div>
+		</div>
+		
+		<div class="box">
+			<h2 class="box__title">見出し</h2>
+			<p class="box__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+		</div>
+		
+	</div>
+	
+	
+	
+
+</body>
+
+</html>
+
+<!--
+	2026/03/28土
+	
+	https://zero-plus.io/media/css-position-absolute/
+	【CSS】要素の絶対位置を指定するposition: absolute;の使い方を分かりやすく解説
+	CSSプロパティのpositionに、relativeとabsoluteをセットで指定する方法
+	
+	親要素と子要素の両方にz-indexを指定する場合、
+	子要素の値が親要素よりどんなに小さくても、子要素の方が前に配置される。
+	
+	position: relative; を適用した親要素にpadding、margin、borderを適用する場合、
+	absoluteを適用した子要素の位置は、親要素のborderの内側が基準
+	parent要素に適用したpaddingやmarginはchild要素に影響を受けないが、
+	border（境界線）が太ければ太いほどchild要素は内側へと移動していく
+	・margin：子要素childに影響しない
+	・padiing：子要素childに影響しない
+	・border：子要素childの位置がborderの太さによって変わる
+	
+	
+	※上下左右中央寄せする
+	transform: translate(x, y);を指定すると
+	x方向（横方向）にboxのwidthの半分の位置に移動させ、
+	y方向（縦方向）にboxのheightの半分の位置に移動させられる
+	→relativeとabsoluteをセットで使って、要素を上下左右中央に配置ができる
+	
+	※要素と要素を重ねる
+	relativeとabsoluteを使って、要素と要素を重ねられる
+	
+	
+-->

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.box {
+		background-color: coral;
+		height: 3em;
+		width: 4em;
+		font-weight: 700;
+		color: aliceblue;
+		margin: 10px;
+		padding: 5px;
+		
+		/* テキストの上下左右中央寄せ */
+		display: flex;				/* 左右中央 */
+		justify-content: center;	/* 左右中央 */
+		align-items: center;		/* 上下中央 */
+	}
+	
+	.box2 {
+		font-size: xx-large;
+	}
+	
+	div.row {
+		display: flex;
+		flex-direction: row;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+	}
+	div.row-reverse {
+		display: flex;
+		flex-direction: row-reverse;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+	}
+	div.column {
+		display: flex;
+		flex-direction: column;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+	}
+	div.column-reverse {
+		display: flex;
+		flex-direction: column-reverse;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+	}
+	
+	div.nowrap {
+		display: flex;
+		flex-wrap: nowrap;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+		width: 300px;
+	}
+	div.wrap {
+		display: flex;
+		flex-wrap: wrap;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+		width: 300px;
+	}
+	div.wrap-reverse {
+		display: flex;
+		flex-wrap: wrap-reverse;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+		width: 300px;
+	}
+	
+	div.start {
+		display: flex;
+		justify-content: start;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+	}
+	div.center {
+		display: flex;
+		justify-content: center;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+	}
+	div.end {
+		display: flex;
+		justify-content: end;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+	}
+	div.space-between {
+		display: flex;
+		justify-content: space-between;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+	}
+	div.space-around {
+		display: flex;
+		justify-content: space-around;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+	}
+	div.space-evenly {
+		display: flex;
+		justify-content: space-evenly;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+	}
+	
+	div.column-space-around {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+		height: 400px;
+	}
+	
+	div.stretch {
+		display: flex;
+		align-items: stretch;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+		height: 10em;;
+	}
+	div.start-y {
+		display: flex;
+		align-items: flex-start;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+		height: 10em;;
+	}
+	div.center-y {
+		display: flex;
+		align-items: center;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+		height: 10em;;
+	}
+	div.end-y {
+		display: flex;
+		align-items: end;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+		height: 10em;;
+	}
+	div.baseline {
+		display: flex;
+		align-items: baseline;
+		background-color: lemonchiffon;
+		margin: 10px;
+		padding: 10px;
+		height: 10em;;
+	}
+	
+	
+	
+</style>
+</head>
+<body>
+	
+	<hr>
+	
+	<p>並べる方向を指定（flex-direction）</p>
+	
+	row:
+	<div class="row">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+	</div>
+	row-reverse:
+	<div class="row-reverse">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+	</div>
+	column:
+	<div class="column">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+	</div>
+	column-reverse:
+	<div class="column-reverse">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+	</div>
+	
+	<hr>
+	
+	<p>折り返しを指定（flex-wrap）</p>
+	
+	nowrap:
+	<div class="nowrap">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+		<div class="box">要素4</div>
+	</div>
+	wrap:
+	<div class="wrap">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+		<div class="box">要素4</div>
+	</div>
+	wrap-reverse:
+	<div class="wrap-reverse">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+		<div class="box">要素4</div>
+	</div>
+	
+	<hr>
+	
+	<p>水平方向のレイアウトを指定（justify-content）</p>
+	
+	start:
+	<div class="start">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+	</div>
+	center:
+	<div class="center">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+	</div>
+	end:
+	<div class="end">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+	</div>
+	space-between:
+	<div class="space-between">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+	</div>
+	space-around:
+	<div class="space-around">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+	</div>
+	space-evenly:
+	<div class="space-evenly">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+	</div>
+	
+	<hr>
+	
+	<p>上下方向のレイアウトを指定（justify-content）</p>
+	
+	column-space-around:
+	<div class="column-space-around">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+	</div>
+	
+	<hr>
+	
+	<p>垂直方向のレイアウトを指定（align-items）</p>
+	
+	stretch:
+	<div class="stretch">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+	</div>
+	start2:
+	<div class="start-y">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+	</div>
+	center2:
+	<div class="center-y">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+	</div>
+	end2:
+	<div class="end-y">
+		<div class="box">要素1</div>
+		<div class="box">要素2</div>
+		<div class="box">要素3</div>
+	</div>
+	baseline:
+	<div class="baseline">
+		<div class="box">要素1</div>
+		<div class="box box2">要素2</div>
+		<div class="box">要素3</div>
+	</div>
+	
+	
+
+</body>
+</html>
+
+<!--
+	2026/03/28土
+	
+	https://developer.mozilla.org/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox
+	
+	https://qiita.com/sinke_123/items/1c2765662e84c37e1562
+	
+	https://zero-plus.io/media/css-justify-content/
+	
+	https://mamewaza.com/support/blog/howto-use-flex.html
+	
+-->

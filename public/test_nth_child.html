@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		li {
+			background-color: #fafafa;
+		}
+		/* li要素の中で、偶数番目のものだけを選択 */
+		li:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+		li:first-child {
+			background-color: #909090;
+		}
+		li:last-child {
+			background-color: #505050;
+			font-weight: bolder;
+		}
+		
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+			text-align: center;
+		}
+
+		thead tr {
+			background-color: #909090;
+		}
+
+		tbody tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		tbody th {
+			background-color: #909090;
+		}
+		
+		
+		
+		/* 3行目 */
+		table.test0 tr:nth-of-type(3) td {
+			color: yellow;
+		}
+		/* 2で割って1余る行目 */
+		table.test1 tr:nth-of-type(2n+1) td {
+			color: red;
+		}
+		/* 3で割って1余る行目 */
+		table.test2 tr:nth-of-type(3n+1) td {
+			color: blue;
+		}
+		/* 3行目以降 */
+		table.test3 tr:nth-of-type(n+3) td {
+			color: green;
+		}
+		/* 3行目未満 */
+		table.test4 tr:not(:nth-of-type(n+3)) td {
+			color: orange;
+		}
+		
+		
+		ul.test {
+		  display:flex;
+		  flex-wrap:wrap;
+		  justify-content:center;
+		  gap:10px;
+		}
+		ul.test li {
+		  flex-basis:30%;
+		  background:#eaf5f4;
+		  text-align:center;
+		  margin:0;
+		  padding:15px,10px;
+		  border:1px solid #fff;
+		}
+		/* 2列目の背景色 */
+		ul.test li:nth-child(3n - 1) {
+		 background:#83ccc9;
+		}
+		/* 1列目の背景色 */
+		ul.test li:nth-child(3n - 2) {
+		 background:#1d928f;
+		}
+		
+		
+	</style>
+</head>
+
+<body>
+	<ul>
+		<li>リスト項目 1番目</li>
+		<li>リスト項目 2番目</li>
+		<li>リスト項目 3番目</li>
+		<li>リスト項目 4番目</li>
+		<li>リスト項目 5番目</li>
+		<li>リスト項目 6番目</li>
+		<li>リスト項目 7番目</li>
+		<li>リスト項目 8番目</li>
+		<li>リスト項目 9番目</li>
+		<li>リスト項目10番目</li>
+	</ul>
+
+	<table>
+		<thead>
+			<tr>
+				<td></td>
+				<th>AAA</th>
+				<th>BBB</th>
+				<th>CCC</th>
+				<th>DDD</th>
+				<th>EEE</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>X001</th>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<th>X002</th>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<th>X003</th>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<th>X004</th>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<hr>
+	
+	<table class="test0">
+		<tr>
+			<td>1行目1列目</td>
+			<td>1行目2列目</td>
+			<td>1行目3列目</td>
+			<td>1行目4列目</td>
+		</tr>
+		<tr>
+			<td>2行目1列目</td>
+			<td>2行目2列目</td>
+			<td>2行目3列目</td>
+			<td>2行目4列目</td>
+		</tr>
+		<tr>
+			<td>3行目1列目</td>
+			<td>3行目2列目</td>
+			<td>3行目3列目</td>
+			<td>3行目4列目</td>
+		</tr>
+		<tr>
+			<td>4行目1列目</td>
+			<td>4行目2列目</td>
+			<td>4行目3列目</td>
+			<td>4行目4列目</td>
+		</tr>
+		<tr>
+			<td>5行目1列目</td>
+			<td>5行目2列目</td>
+			<td>5行目3列目</td>
+			<td>5行目4列目</td>
+		</tr>
+		<tr>
+			<td>6行目1列目</td>
+			<td>6行目2列目</td>
+			<td>6行目3列目</td>
+			<td>6行目4列目</td>
+		</tr>
+	</table>
+	
+	<table class="test1">
+		<tr>
+			<td>1行目1列目</td>
+			<td>1行目2列目</td>
+			<td>1行目3列目</td>
+			<td>1行目4列目</td>
+		</tr>
+		<tr>
+			<td>2行目1列目</td>
+			<td>2行目2列目</td>
+			<td>2行目3列目</td>
+			<td>2行目4列目</td>
+		</tr>
+		<tr>
+			<td>3行目1列目</td>
+			<td>3行目2列目</td>
+			<td>3行目3列目</td>
+			<td>3行目4列目</td>
+		</tr>
+		<tr>
+			<td>4行目1列目</td>
+			<td>4行目2列目</td>
+			<td>4行目3列目</td>
+			<td>4行目4列目</td>
+		</tr>
+		<tr>
+			<td>5行目1列目</td>
+			<td>5行目2列目</td>
+			<td>5行目3列目</td>
+			<td>5行目4列目</td>
+		</tr>
+		<tr>
+			<td>6行目1列目</td>
+			<td>6行目2列目</td>
+			<td>6行目3列目</td>
+			<td>6行目4列目</td>
+		</tr>
+	</table>
+	
+	<hr>
+	
+	<table class="test2">
+		<tr>
+			<td>1行目1列目</td>
+			<td>1行目2列目</td>
+			<td>1行目3列目</td>
+			<td>1行目4列目</td>
+		</tr>
+		<tr>
+			<td>2行目1列目</td>
+			<td>2行目2列目</td>
+			<td>2行目3列目</td>
+			<td>2行目4列目</td>
+		</tr>
+		<tr>
+			<td>3行目1列目</td>
+			<td>3行目2列目</td>
+			<td>3行目3列目</td>
+			<td>3行目4列目</td>
+		</tr>
+		<tr>
+			<td>4行目1列目</td>
+			<td>4行目2列目</td>
+			<td>4行目3列目</td>
+			<td>4行目4列目</td>
+		</tr>
+		<tr>
+			<td>5行目1列目</td>
+			<td>5行目2列目</td>
+			<td>5行目3列目</td>
+			<td>5行目4列目</td>
+		</tr>
+		<tr>
+			<td>6行目1列目</td>
+			<td>6行目2列目</td>
+			<td>6行目3列目</td>
+			<td>6行目4列目</td>
+		</tr>
+	</table>
+	
+	<hr>
+	
+	<table class="test3">
+		<tr>
+			<td>1行目1列目</td>
+			<td>1行目2列目</td>
+			<td>1行目3列目</td>
+			<td>1行目4列目</td>
+		</tr>
+		<tr>
+			<td>2行目1列目</td>
+			<td>2行目2列目</td>
+			<td>2行目3列目</td>
+			<td>2行目4列目</td>
+		</tr>
+		<tr>
+			<td>3行目1列目</td>
+			<td>3行目2列目</td>
+			<td>3行目3列目</td>
+			<td>3行目4列目</td>
+		</tr>
+		<tr>
+			<td>4行目1列目</td>
+			<td>4行目2列目</td>
+			<td>4行目3列目</td>
+			<td>4行目4列目</td>
+		</tr>
+		<tr>
+			<td>5行目1列目</td>
+			<td>5行目2列目</td>
+			<td>5行目3列目</td>
+			<td>5行目4列目</td>
+		</tr>
+		<tr>
+			<td>6行目1列目</td>
+			<td>6行目2列目</td>
+			<td>6行目3列目</td>
+			<td>6行目4列目</td>
+		</tr>
+	</table>
+	
+	<hr>
+	
+	<table class="test4">
+		<tr>
+			<td>1行目1列目</td>
+			<td>1行目2列目</td>
+			<td>1行目3列目</td>
+			<td>1行目4列目</td>
+		</tr>
+		<tr>
+			<td>2行目1列目</td>
+			<td>2行目2列目</td>
+			<td>2行目3列目</td>
+			<td>2行目4列目</td>
+		</tr>
+		<tr>
+			<td>3行目1列目</td>
+			<td>3行目2列目</td>
+			<td>3行目3列目</td>
+			<td>3行目4列目</td>
+		</tr>
+		<tr>
+			<td>4行目1列目</td>
+			<td>4行目2列目</td>
+			<td>4行目3列目</td>
+			<td>4行目4列目</td>
+		</tr>
+		<tr>
+			<td>5行目1列目</td>
+			<td>5行目2列目</td>
+			<td>5行目3列目</td>
+			<td>5行目4列目</td>
+		</tr>
+		<tr>
+			<td>6行目1列目</td>
+			<td>6行目2列目</td>
+			<td>6行目3列目</td>
+			<td>6行目4列目</td>
+		</tr>
+	</table>
+	
+	
+	<ul class="test">
+	  <li>1</li>
+	  <li>2</li>
+	  <li>3</li>
+	  <li>4</li>
+	  <li>5</li>
+	  <li>6</li>
+	</ul>
+
+</body>
+
+</html>
+
+
+<!--
+	2026/03/27金
+	
+	https://engineer-tips.com/2025/09/29/css-even-design/
+	CSSで偶数番目だけデザインを変える方法！:nth-child(even)を徹底解説
+	
+	https://qiita.com/kon_yu/items/a8c2891c389a7498e7ef
+	:nth-childにおけるeven, oddの挙動の整理
+	
+	https://leqturez.jp/nth-child-nth-of-type/
+	CSS 疑似クラス 1番目・n番目・最後・奇数偶数のスタイル指定
+	
+-->
